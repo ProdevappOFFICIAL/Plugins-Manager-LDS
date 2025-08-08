@@ -12,11 +12,11 @@
       "category": "Education",
       "tags": ["quiz", "education", "interactive"],
       "link": "https://plugins-manager-lds.vercel.app/quiz-builder",
-      "previewImage": "https://example.com/images/quiz-builder-preview.jpg",
+      "previewImage": "https://prodevappofficial.github.io/Plugins-Manager-LDS/assets/quiz-builder.JPG",
       "icon": "https://example.com/icons/quiz-builder-icon.png",
       "screenshots": [
-        "https://example.com/screenshots/quiz-builder-1.jpg",
-        "https://example.com/screenshots/quiz-builder-2.jpg"
+        "https://prodevappofficial.github.io/Plugins-Manager-LDS/assets/quiz-builder.JPG",
+        "https://prodevappofficial.github.io/Plugins-Manager-LDS/assets/quiz-builder.JPG"
       ],
       "features": [
         "Multiple question types",
