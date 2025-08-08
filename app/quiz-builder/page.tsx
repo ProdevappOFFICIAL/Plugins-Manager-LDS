@@ -88,7 +88,7 @@ export default function QuizBuilder() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto py-8 px-4 text-[10px] border-t border-gray-400/20 bg-red-600">
+    <div className="max-w-2xl mx-auto py-8 px-4 text-[10px] border-t border-gray-400/20">
       <div className="mb-8">
         <h1 className=" font-bold text-gray-900 dark:text-white mb-2">Quiz Builder</h1>
         <p className=" text-gray-600 dark:text-gray-400">Create your own quiz by adding questions and options.</p>
@@ -129,86 +129,10 @@ export default function QuizBuilder() {
           </div>
         </div>
 
-        <div className="mb-6">
-          <label className="block  font-medium text-gray-700 dark:text-gray-300 mb-2">Question</label>
-          <input
-            className="w-full border border-gray-300 dark:border-gray-600 rounded-md px-3 py-2  bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            value={questionText}
-            onChange={(e) => setQuestionText(e.target.value)}
-            placeholder="Enter your question"
-            required
-          />
-        </div>
-
-        <div className="mb-6">
-          <label className="block  font-medium text-gray-700 dark:text-gray-300 mb-2">Options</label>
-          <div className="space-y-3">
-            {options.map((opt, idx) => (
-              <div key={idx} className="flex items-center gap-3">
-                <input
-                  className="flex-1 border border-gray-300 dark:border-gray-600 rounded-md px-3 py-2  bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  value={opt}
-                  onChange={(e) => handleOptionChange(idx, e.target.value)}
-                  placeholder={`Option ${idx + 1}`}
-                  required
-                />
-                <div className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="correct"
-                    checked={correct === idx}
-                    onChange={() => setCorrect(idx)}
-                    aria-label="Set as correct answer"
-                    className="w-4 h-4 text-blue-600 focus:ring-blue-500"
-                  />
-                  <span className=" text-gray-600 dark:text-gray-400">Correct</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <button
-          type="button"
-          onClick={handleAddQuestion}
-          className="bg-blue-600 hover:bg-blue-700 text-white  font-medium px-4 py-2 rounded-md transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-        >
-          Add Question
-        </button>
+      
       </div>
 
-      <div>
-        <h2 className=" font-semibold text-gray-900 dark:text-white mb-4">Questions ({questions.length})</h2>
-        {questions.length === 0 ? (
-          <div className="text-center py-8">
-            <p className=" text-gray-500 dark:text-gray-400">No questions added yet.</p>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {questions.map((q, i) => (
-              <div key={i} className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                <div className=" font-medium text-gray-900 dark:text-white mb-2">
-                  {i + 1}. {q.text}
-                </div>
-                <div className=" text-blue-600 dark:text-blue-400 mb-3">
-                  Subject: {q.subject}
-                </div>
-                <ul className="space-y-1">
-                  {q.options.map((opt: string, j: number) => (
-                    <li key={j} className={` flex items-center gap-2 ${j === q.correct ? "font-medium text-green-600 dark:text-green-400" : "text-gray-700 dark:text-gray-300"}`}>
-                      <span className="w-5 h-5 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center  font-medium">
-                        {String.fromCharCode(65 + j)}
-                      </span>
-                      {opt}
-                      {j === q.correct && <span className=" bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-2 py-1 rounded-full">Correct</span>}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+
     </div>
   );
 }
