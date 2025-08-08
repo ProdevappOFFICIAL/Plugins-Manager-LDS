@@ -1,0 +1,119 @@
+{
+  "plugins": [
+    {
+      "id": "plugin-001",
+      "name": "Quiz Builder Pro",
+      "description": "Advanced quiz creation tool with multiple question types and analytics",
+      "details": "Create interactive quizzes with drag-and-drop interface, support for images, videos, and real-time analytics. Perfect for educators and trainers.",
+      "version": "1.2.0",
+      "author": "LearningDeck Team",
+      "category": "Education",
+      "tags": ["quiz", "education", "interactive"],
+      "link": "https://plugins-manager-lds.vercel.app/quiz-builder",
+      "previewImage": "https://example.com/images/quiz-builder-preview.jpg",
+      "icon": "https://example.com/icons/quiz-builder-icon.png",
+      "screenshots": [
+        "https://example.com/screenshots/quiz-builder-1.jpg",
+        "https://example.com/screenshots/quiz-builder-2.jpg"
+      ],
+      "features": [
+        "Multiple question types",
+        "Real-time analytics",
+        "Export to PDF",
+        "Mobile responsive"
+      ],
+      "requirements": {
+        "minVersion": "1.0.0",
+        "permissions": ["storage", "network"]
+      },
+      "size": "2.5MB",
+      "lastUpdated": "2024-01-15T10:30:00Z",
+      "downloads": 1250,
+      "rating": 4.8,
+      "reviews": 45,
+      "status": "active",
+      "featured": true,
+      "free": true,
+      "price": null
+    },
+    {
+      "id": "plugin-002", 
+      "name": "Grade Calculator",
+      "description": "Comprehensive grade calculation and reporting system",
+      "details": "Calculate student grades with weighted categories, generate reports, and track progress over time. Supports multiple grading scales and custom rubrics.",
+      "version": "2.1.3",
+      "author": "EduTools Inc",
+      "category": "Assessment",
+      "tags": ["grades", "assessment", "reporting"],
+      "link": "https://grade-calc.edutools.com",
+      "previewImage": "https://example.com/images/grade-calc-preview.jpg",
+      "icon": "https://example.com/icons/grade-calc-icon.png",
+      "screenshots": [
+        "https://example.com/screenshots/grade-calc-1.jpg",
+        "https://example.com/screenshots/grade-calc-2.jpg"
+      ],
+      "features": [
+        "Weighted grade categories",
+        "Multiple grading scales",
+        "Progress tracking",
+        "Export reports"
+      ],
+      "requirements": {
+        "minVersion": "1.0.0",
+        "permissions": ["storage", "export"]
+      },
+      "size": "1.8MB",
+      "lastUpdated": "2024-01-10T14:20:00Z",
+      "downloads": 890,
+      "rating": 4.6,
+      "reviews": 32,
+      "status": "active",
+      "featured": false,
+      "free": false,
+      "price": "$9.99"
+    },
+    {
+      "id": "plugin-003",
+      "name": "Student Attendance Tracker",
+      "description": "Track and manage student attendance with automated reports",
+      "details": "Efficiently track student attendance with QR code scanning, automated notifications, and comprehensive reporting. Generate attendance reports for parents and administrators.",
+      "version": "1.5.2",
+      "author": "SchoolTech Solutions",
+      "category": "Management",
+      "tags": ["attendance", "tracking", "reports"],
+      "link": "https://attendance.schooltech.com",
+      "previewImage": "https://example.com/images/attendance-preview.jpg",
+      "icon": "https://example.com/icons/attendance-icon.png",
+      "screenshots": [
+        "https://example.com/screenshots/attendance-1.jpg",
+        "https://example.com/screenshots/attendance-2.jpg"
+      ],
+      "features": [
+        "QR code scanning",
+        "Automated notifications",
+        "Parent reports",
+        "Bulk operations"
+      ],
+      "requirements": {
+        "minVersion": "1.0.0",
+        "permissions": ["camera", "storage", "notifications"]
+      },
+      "size": "3.2MB",
+      "lastUpdated": "2024-01-08T09:15:00Z",
+      "downloads": 2100,
+      "rating": 4.9,
+      "reviews": 78,
+      "status": "active",
+      "featured": true,
+      "free": true,
+      "price": null
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15T12:00:00Z",
+    "totalPlugins": 3,
+    "categories": ["Education", "Assessment", "Management"],
+    "apiVersion": "v1"
+  }
+}
