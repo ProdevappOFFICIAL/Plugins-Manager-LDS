@@ -88,7 +88,7 @@ export default function QuizBuilder() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto py-8 px-4 text-[10px] border-t border-gray-400/20">
+    <div className="max-w-2xl mx-auto py-8 px-4 text-[10px] border-t border-gray-400/20 bg-red-600">
       <div className="mb-8">
         <h1 className=" font-bold text-gray-900 dark:text-white mb-2">Quiz Builder</h1>
         <p className=" text-gray-600 dark:text-gray-400">Create your own quiz by adding questions and options.</p>
