@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className=" flex flex-col items-center justify-center bg-black w-screen h-screen text-white">
+    <div className=" flex flex-col items-center justify-center bg-black w-screen h-screen text-white border-t border-gray-400/20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
