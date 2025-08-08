@@ -7,7 +7,7 @@
       "details": "Create interactive quizzes with drag-and-drop interface, support for images, videos, and real-time analytics. Perfect for educators and trainers.",
       "version": "1.2.0",
       "author": "LearningDeck Team",
-      "width": 1200,
+      "width": 600,
       "height": 800,
       "category": "Education",
       "tags": ["quiz", "education", "interactive"],
