@@ -24,7 +24,11 @@ export default function QuizBuilder() {
         setLoading(true);
         setError("");
         
-        const response = await fetch("http://localhost/api/subject");
+        const response = await fetch("http://localhost/api/subject",   {
+            headers: {
+              authorization: '4000'
+            }
+          });
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
