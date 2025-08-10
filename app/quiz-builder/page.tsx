@@ -13,7 +13,7 @@ export default function QuizBuilder() {
   const [questionText, setQuestionText] = useState("");
   const [options, setOptions] = useState(["", "", "", ""]);
   const [correct, setCorrect] = useState(0);
-  const [subjects, setSubjects] = useState<{id:number, name:string}[]>([]);
+  const [subjects, setSubjects] = useState<{ id: number, name: string }[]>([]);
   const [selectedSubject, setSelectedSubject] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -23,20 +23,22 @@ export default function QuizBuilder() {
       try {
         setLoading(true);
         setError("");
-        
-        const response = await fetch("http://localhost/api/subject",   {
-            headers: {
-              authorization: '4000'
-            }
-          });
-        
+
+        const response = await fetch("http://localhost/api/subject", {
+          method: "GET", // optional here but makes intent clear
+          headers: {
+            Authorization: "4000" // Capitalizing is conventional
+          }
+        });
+
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const data = await response.json();
         console.log("Fetched subjects:", data); // Debug log
-        
+
         if (Array.isArray(data)) {
           setSubjects(data);
         } else {
@@ -45,22 +47,22 @@ export default function QuizBuilder() {
       } catch (err) {
         console.error("Error fetching subjects:", err);
         setError(err instanceof Error ? err.message : "Failed to fetch subjects");
-        
+
         // Fallback with mock data for testing
         setSubjects([
-          {"id":1,"name":"MATHS"},
-          {"id":2,"name":"ENG"},
-          {"id":3,"name":"CHM"},
-          {"id":4,"name":"PHY"},
-          {"id":5,"name":"BIOLOGY"},
-          {"id":6,"name":"AGR"},
-          {"id":7,"name":"FMT"},
-          {"id":8,"name":"BST"},
-          {"id":9,"name":"ICT"},
-          {"id":10,"name":"FRE"},
-          {"id":11,"name":"IGB"},
-          {"id":12,"name":"YOR"},
-          {"id":13,"name":"CCA"}
+          { "id": 1, "name": "MATHS" },
+          { "id": 2, "name": "ENG" },
+          { "id": 3, "name": "CHM" },
+          { "id": 4, "name": "PHY" },
+          { "id": 5, "name": "BIOLOGY" },
+          { "id": 6, "name": "AGR" },
+          { "id": 7, "name": "FMT" },
+          { "id": 8, "name": "BST" },
+          { "id": 9, "name": "ICT" },
+          { "id": 10, "name": "FRE" },
+          { "id": 11, "name": "IGB" },
+          { "id": 12, "name": "YOR" },
+          { "id": 13, "name": "CCA" }
         ]);
       } finally {
         setLoading(false);
@@ -103,13 +105,13 @@ export default function QuizBuilder() {
           <label className="block  font-medium text-gray-700 dark:text-gray-300 mb-2">
             Subject ({subjects.length} available)
           </label>
-          
+
           {error && (
             <div className="mb-2 p-2 bg-yellow-100 dark:bg-yellow-900 border border-yellow-300 dark:border-yellow-700 rounded  text-yellow-800 dark:text-yellow-200">
               Network error: Using fallback data. {error}
             </div>
           )}
-          
+
           <select
             className="w-full border border-gray-300 dark:border-gray-600 rounded-md px-3 py-2  bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             value={selectedSubject}
@@ -126,14 +128,14 @@ export default function QuizBuilder() {
               </option>
             ))}
           </select>
-          
+
           {/* Debug info */}
           <div className="mt-2  text-gray-500">
             Debug: {subjects.length} subjects loaded, Loading: {loading ? "Yes" : "No"}
           </div>
         </div>
 
-      
+
       </div>
 
 
