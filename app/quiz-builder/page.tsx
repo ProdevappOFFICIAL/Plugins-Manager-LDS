@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import { useState, useEffect } from "react";
 
 export default function QuizBuilder() {
@@ -24,10 +25,9 @@ export default function QuizBuilder() {
         setLoading(true);
         setError("");
 
-        const response = await fetch("http://localhost/api/subject", {
-          method: "GET", // optional here but makes intent clear
+        const response = await axios.get("http://localhost:3000/api/subject", {
           headers: {
-            Authorization: "4000" // Capitalizing is conventional
+            Authorization: "4000" // Capitalized for convention
           }
         });
 
