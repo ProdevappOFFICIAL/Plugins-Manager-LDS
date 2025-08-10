@@ -32,11 +32,8 @@ export default function QuizBuilder() {
         });
 
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
 
-        const data = await response.json();
+        const data = response.data;
         console.log("Fetched subjects:", data); // Debug log
 
         if (Array.isArray(data)) {
