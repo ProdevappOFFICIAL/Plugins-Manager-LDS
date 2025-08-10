@@ -139,7 +139,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-green-50 rounded-lg p-4">
+        <div className="bg-green-50  p-4">
           <h3 className=" font-semibold text-green-800 mb-2">Summary Statistics</h3>
           <div className="space-y-1 ">
             <div className="flex justify-between text-green-700">
@@ -160,7 +160,7 @@ const PreviewComponents = {
       
       <div>
         <h3 className=" font-semibold text-gray-900 mb-3">Subject Results</h3>
-        <div className="overflow-hidden border border-gray-200 rounded-lg">
+        <div className="overflow-hidden border border-gray-200 ">
           <table className="w-full ">
             <thead className="bg-green-50">
               <tr>
@@ -201,7 +201,7 @@ const PreviewComponents = {
       </div>
       
       <div className="mt-6 text-center">
-        <div className="bg-green-100 border border-green-200 rounded-lg p-3">
+        <div className="bg-green-100 border border-green-200  p-3">
           <p className=" text-green-800 font-medium">
             🏆 QUALIFICATION ACHIEVED: University Admission Requirements Met
           </p>
@@ -244,7 +244,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-blue-50 rounded-lg p-4">
+        <div className="bg-blue-50  p-4">
           <h3 className=" font-semibold text-blue-800 mb-2">Performance Overview</h3>
           <div className="space-y-1 ">
             <div className="flex justify-between text-blue-700">
@@ -277,7 +277,7 @@ const PreviewComponents = {
             {subject: 'Government', code: 'GOV', grade: 'C6', score: 55, status: 'Pass'},
             {subject: 'Arabic Studies', code: 'ARA', grade: 'D7', score: 45, status: 'Fail'}
           ].map((result, i) => (
-            <div key={i} className="bg-gray-50 rounded-lg p-3">
+            <div key={i} className="bg-gray-50  p-3">
               <div className="grid grid-cols-5 gap-4 items-center ">
                 <div className="font-medium text-gray-900">{result.subject}</div>
                 <div className="text-center text-gray-600">{result.code}</div>
@@ -341,7 +341,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-4">
+        <div className="bg-gradient-to-br from-purple-50 to-pink-50  p-4">
           <h3 className=" font-semibold text-purple-800 mb-2">Academic Excellence</h3>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
@@ -379,7 +379,7 @@ const PreviewComponents = {
             {subject: 'English Lang.', score: 82, grade: 'A-'},
             {subject: 'Further Maths', score: 92, grade: 'A+'}
           ].map((subject, i) => (
-            <div key={i} className="bg-gray-50 rounded-lg p-3 text-center">
+            <div key={i} className="bg-gray-50  p-3 text-center">
               <div className="font-medium text-gray-900">{subject.subject}</div>
               <div className=" font-bold text-purple-600 my-1">{subject.score}%</div>
               <div className=" text-gray-600">{subject.grade}</div>
@@ -389,7 +389,7 @@ const PreviewComponents = {
       </div>
       
       <div className="grid grid-cols-2 gap-6">
-        <div className="bg-green-50 rounded-lg p-4">
+        <div className="bg-green-50  p-4">
           <h4 className=" font-semibold text-green-800 mb-2">Character Assessment</h4>
           <div className="space-y-1  text-green-700">
             <div>Leadership: Excellent</div>
@@ -399,7 +399,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-blue-50 rounded-lg p-4">
+        <div className="bg-blue-50  p-4">
           <h4 className=" font-semibold text-blue-800 mb-2">Teacher's Remarks</h4>
           <p className=" text-blue-700">
             "Toluwase has shown exceptional academic performance and demonstrates strong leadership qualities. 
@@ -447,7 +447,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-orange-50 rounded-lg p-4">
+        <div className="bg-orange-50  p-4">
           <h3 className=" font-semibold text-orange-800 mb-2">Term Summary</h3>
           <div className="space-y-1 ">
             <div className="flex justify-between text-orange-700">
@@ -472,7 +472,7 @@ const PreviewComponents = {
       
       <div className="mb-6">
         <h3 className=" font-semibold text-gray-900 mb-3">Subject Breakdown</h3>
-        <div className="overflow-hidden border border-gray-200 rounded-lg">
+        <div className="overflow-hidden border border-gray-200 ">
           <table className="w-full ">
             <thead className="bg-orange-50">
               <tr>
@@ -518,7 +518,7 @@ const PreviewComponents = {
         </div>
       </div>
       
-      <div className="bg-gray-50 rounded-lg p-4">
+      <div className="bg-gray-50  p-4">
         <h4 className=" font-semibold text-gray-900 mb-2">Class Teacher's Comment</h4>
         <p className=" text-gray-700 mb-2">
           "Chioma has shown good improvement this term especially in Literature and C.R.S. 
@@ -565,7 +565,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-teal-50 rounded-lg p-4">
+        <div className="bg-teal-50  p-4">
           <h3 className=" font-semibold text-teal-800 mb-2">Academic Performance</h3>
           <div className="space-y-1 ">
             <div className="flex justify-between text-teal-700">
@@ -583,7 +583,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-cyan-50 rounded-lg p-4">
+        <div className="bg-cyan-50  p-4">
           <h3 className=" font-semibold text-cyan-800 mb-2">Boarding Life</h3>
           <div className="space-y-1 ">
             <div className="flex justify-between text-cyan-700">
@@ -632,7 +632,7 @@ const PreviewComponents = {
         <div>
           <h3 className=" font-semibold text-gray-900 mb-3">Character Development</h3>
           <div className="space-y-3">
-            <div className="bg-green-50 rounded-lg p-3">
+            <div className="bg-green-50  p-3">
               <h4 className=" font-semibold text-green-800">Strengths</h4>
               <ul className=" text-green-700 mt-1 space-y-1">
                 <li>• Excellent leadership skills</li>
@@ -641,7 +641,7 @@ const PreviewComponents = {
               </ul>
             </div>
             
-            <div className="bg-orange-50 rounded-lg p-3">
+            <div className="bg-orange-50  p-3">
               <h4 className=" font-semibold text-orange-800">Areas for Improvement</h4>
               <ul className=" text-orange-700 mt-1 space-y-1">
                 <li>• Participation in sports activities</li>
@@ -653,7 +653,7 @@ const PreviewComponents = {
       </div>
       
       <div className="grid grid-cols-2 gap-6">
-        <div className="bg-teal-50 rounded-lg p-4">
+        <div className="bg-teal-50  p-4">
           <h4 className=" font-semibold text-teal-800 mb-2">Housemaster's Report</h4>
           <p className=" text-teal-700">
             "Emeka has been exemplary in his conduct and academic performance. He shows great potential 
@@ -664,7 +664,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-gray-50 rounded-lg p-4">
+        <div className="bg-gray-50  p-4">
           <h4 className=" font-semibold text-gray-900 mb-2">Principal's Remarks</h4>
           <p className=" text-gray-700">
             "An outstanding student who embodies the values of discipline, excellence and leadership. 
@@ -712,7 +712,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-indigo-50 rounded-lg p-4">
+        <div className="bg-indigo-50  p-4">
           <h3 className=" font-semibold text-indigo-800 mb-2">Academic Summary</h3>
           <div className="space-y-1 ">
             <div className="flex justify-between text-indigo-700">
@@ -737,7 +737,7 @@ const PreviewComponents = {
       
       <div className="mb-6">
         <h3 className=" font-semibold text-gray-900 mb-3">Cambridge IGCSE Results</h3>
-        <div className="overflow-hidden border border-gray-200 rounded-lg">
+        <div className="overflow-hidden border border-gray-200 ">
           <table className="w-full ">
             <thead className="bg-indigo-50">
               <tr>
@@ -783,7 +783,7 @@ const PreviewComponents = {
       </div>
       
       <div className="grid grid-cols-3 gap-4">
-        <div className="bg-green-50 rounded-lg p-4">
+        <div className="bg-green-50  p-4">
           <h4 className=" font-semibold text-green-800 mb-2">Achievements</h4>
           <ul className=" text-green-700 space-y-1">
             <li>• Subject Prize - Mathematics</li>
@@ -792,7 +792,7 @@ const PreviewComponents = {
           </ul>
         </div>
         
-        <div className="bg-blue-50 rounded-lg p-4">
+        <div className="bg-blue-50  p-4">
           <h4 className=" font-semibold text-blue-800 mb-2">Extracurricular</h4>
           <ul className=" text-blue-700 space-y-1">
             <li>• Model United Nations</li>
@@ -801,7 +801,7 @@ const PreviewComponents = {
           </ul>
         </div>
         
-        <div className="bg-purple-50 rounded-lg p-4">
+        <div className="bg-purple-50  p-4">
           <h4 className=" font-semibold text-purple-800 mb-2">University Readiness</h4>
           <div className=" text-purple-700">
             <div className="mb-2">Ready for:</div>
@@ -828,7 +828,7 @@ const PreviewComponents = {
       </div>
       
       <div className="text-center mb-8">
-        <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-lg p-6 border-2 border-amber-200">
+        <div className="bg-gradient-to-r from-amber-50 to-yellow-50  p-6 border-2 border-amber-200">
           <p className=" text-gray-700 mb-4">This is to certify that</p>
           <h3 className="text-2xl font-bold text-amber-800 mb-4">ADEBISI KEMI OLUWASEUN</h3>
           <p className=" text-gray-700 mb-2">has successfully completed the Senior Secondary School program</p>
@@ -860,7 +860,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-amber-50 rounded-lg p-4">
+        <div className="bg-amber-50  p-4">
           <h3 className=" font-semibold text-amber-800 mb-2">Honors & Recognition</h3>
           <div className="space-y-1  text-amber-700">
             <div>• Academic Excellence Award 2024</div>
@@ -884,7 +884,7 @@ const PreviewComponents = {
             {subject: 'Government', grade: 'B+', score: '82%'},
             {subject: 'Literature', grade: 'A', score: '90%'}
           ].map((subject, i) => (
-            <div key={i} className="bg-gray-50 rounded-lg p-3 text-center">
+            <div key={i} className="bg-gray-50  p-3 text-center">
               <div className=" font-medium text-gray-900 mb-1">{subject.subject}</div>
               <div className=" font-bold text-amber-600">{subject.grade}</div>
               <div className=" text-gray-600">{subject.score}</div>
@@ -926,7 +926,7 @@ const PreviewComponents = {
       </div>
       
       <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="bg-rose-50 rounded-lg p-4">
+        <div className="bg-rose-50  p-4">
           <h3 className=" font-semibold text-rose-800 mb-2">Current Performance</h3>
           <div className="text-center">
             <div className="text-2xl font-bold text-rose-600">85.6%</div>
@@ -939,7 +939,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-blue-50 rounded-lg p-4">
+        <div className="bg-blue-50  p-4">
           <h3 className=" font-semibold text-blue-800 mb-2">Improvement Trend</h3>
           <div className="text-center">
             <div className="text-2xl font-bold text-green-600">+5.2%</div>
@@ -948,7 +948,7 @@ const PreviewComponents = {
           </div>
         </div>
         
-        <div className="bg-purple-50 rounded-lg p-4">
+        <div className="bg-purple-50  p-4">
           <h3 className=" font-semibold text-purple-800 mb-2">Predicted Grade</h3>
           <div className="text-center">
             <div className="text-2xl font-bold text-purple-600">A-</div>
@@ -970,7 +970,7 @@ const PreviewComponents = {
               {subject: 'English', current: 80, trend: '+6', status: 'improving'},
               {subject: 'Economics', current: 78, trend: '+8', status: 'improving'}
             ].map((subject, i) => (
-              <div key={i} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+              <div key={i} className="flex items-center justify-between bg-gray-50  p-3">
                 <span className=" font-medium text-gray-900">{subject.subject}</span>
                 <div className="flex items-center gap-3">
                   <span className=" font-bold">{subject.current}%</span>
@@ -993,7 +993,7 @@ const PreviewComponents = {
         <div>
           <h3 className=" font-semibold text-gray-900 mb-3">Learning Analytics</h3>
           <div className="space-y-3">
-            <div className="bg-green-50 rounded-lg p-3">
+            <div className="bg-green-50  p-3">
               <h4 className=" font-semibold text-green-800">Strengths Identified</h4>
               <ul className=" text-green-700 mt-2 space-y-1">
                 <li>• Strong analytical skills in STEM subjects</li>
@@ -1003,7 +1003,7 @@ const PreviewComponents = {
               </ul>
             </div>
             
-            <div className="bg-orange-50 rounded-lg p-3">
+            <div className="bg-orange-50  p-3">
               <h4 className=" font-semibold text-orange-800">Improvement Areas</h4>
               <ul className=" text-orange-700 mt-2 space-y-1">
                 <li>• Time management during exams</li>
@@ -1015,7 +1015,7 @@ const PreviewComponents = {
         </div>
       </div>
       
-      <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg p-4 border border-pink-200">
+      <div className="bg-gradient-to-r from-pink-50 to-rose-50  p-4 border border-pink-200">
         <h4 className=" font-semibold text-pink-800 mb-2">AI-Generated Recommendations</h4>
         <div className="grid grid-cols-2 gap-4 ">
           <div>
@@ -1056,16 +1056,16 @@ const SchoolTemplates = () => {
   const PreviewComponent = selectedTemplate ? PreviewComponents[selectedTemplate.preview as keyof typeof PreviewComponents] : null;
 
   return (
-    <div className="flex h-full w-full p-6 text-[10px]">
+    <div className="flex h-full w-full px-6 text-[10px] border-t border-zinc-400/20">
       <div className="">
         {/* Header */}
       
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Templates List */}
-          <div className="lg:col-span-1">
-            <div className="bg-white  p-6">
-              <h2 className=" font-bold text-gray-900 mb-6">Available Templates ({filteredTemplates.length})</h2>
-              <div className="space-y-3 max-h-[80vh] overflow-y-auto">
+          <div className="lg:col-span-1 border-r border-zinc-400/20 py-6 pr-6">
+            <div className="bg-white ">
+          
+              <div className="space-y-3 max-h-[90vh] overflow-hidden">
                 {filteredTemplates.map(template => {
                   const Icon = getIcon(template.category);
                   const SchoolIcon = getSchoolTypeIcon(template.schoolType);
@@ -1074,14 +1074,14 @@ const SchoolTemplates = () => {
                     <div
                       key={template.id}
                       onClick={() => setSelectedTemplate(template)}
-                      className={`p-4 rounded-xl border-2 cursor-pointer transition-all hover: ${
+                      className={`p-4 border cursor-pointer transition-all hover: ${
                         selectedTemplate?.id === template.id
                           ? 'border-blue-500 bg-blue-50 '
                           : 'border-gray-200 hover:border-gray-300'
                       }`}
                     >
                       <div className="flex items-start gap-3">
-                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${template.color} flex items-center justify-center flex-shrink-0`}>
+                        <div className={`w-10 h-10  bg-gradient-to-br ${template.color} flex items-center justify-center flex-shrink-0`}>
                           <Icon className="w-5 h-5 text-white" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -1111,7 +1111,7 @@ const SchoolTemplates = () => {
           </div>
 
           {/* Preview Panel */}
-          <div className="lg:col-span-2 h-full">
+          <div className="lg:col-span-2 h-full py-6">
             <div className="bg-white h-full">
               {selectedTemplate ? (
                 <div className="h-full">
@@ -1135,11 +1135,11 @@ const SchoolTemplates = () => {
                         </div>
                       </div>
                       <div className="flex gap-3">
-                        <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover: transition-all flex items-center gap-2">
+                        <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3  font-medium hover: transition-all flex items-center gap-2">
                           <FileText className="w-4 h-4" />
                           Use Template
                         </button>
-                        <button className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all flex items-center gap-2">
+                        <button className="bg-gray-100 text-gray-700 px-6 py-3  font-medium hover:bg-gray-200 transition-all flex items-center gap-2">
                           <Settings className="w-4 h-4" />
                           Customize
                         </button>
@@ -1147,7 +1147,7 @@ const SchoolTemplates = () => {
                     </div>
                   </div>
                   
-                  <div className="max-h-[80vh] overflow-auto">
+                  <div className="max-h-[90vh] overflow-hidden border-8 border-zinc-600/20">
                     {PreviewComponent && <PreviewComponent />}
                   </div>
                 </div>
@@ -1161,22 +1161,22 @@ const SchoolTemplates = () => {
                       Each template is designed to meet local educational standards and requirements.
                     </p>
                     <div className="mt-6 grid grid-cols-2 gap-4 max-w-md">
-                      <div className="bg-blue-50 p-4 rounded-lg">
+                      <div className="bg-blue-50 p-4 ">
                         <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                         <div className=" font-medium text-blue-900">Examination Results</div>
                         <div className=" text-blue-600">WAEC, NECO & More</div>
                       </div>
-                      <div className="bg-green-50 p-4 rounded-lg">
+                      <div className="bg-green-50 p-4">
                         <BookOpen className="w-8 h-8 text-green-600 mx-auto mb-2" />
                         <div className=" font-medium text-green-900">Report Cards</div>
                         <div className=" text-green-600">All School Types</div>
                       </div>
-                      <div className="bg-purple-50 p-4 rounded-lg">
+                      <div className="bg-purple-50 p-4">
                         <GraduationCap className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                         <div className=" font-medium text-purple-900">Certificates</div>
                         <div className=" text-purple-600">Graduation & Awards</div>
                       </div>
-                      <div className="bg-orange-50 p-4 rounded-lg">
+                      <div className="bg-orange-50 p-4">
                         <Users className="w-8 h-8 text-orange-600 mx-auto mb-2" />
                         <div className=" font-medium text-orange-900">Analytics</div>
                         <div className=" text-orange-600">Progress Tracking</div>
