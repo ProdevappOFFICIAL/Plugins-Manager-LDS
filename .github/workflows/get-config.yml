@@ -1,0 +1,214 @@
+name: Human-like Development Activity
+
+on:
+  schedule:
+    # Runs 3 times a day at realistic coding hours (9 AM, 2 PM, 8 PM UTC)
+    - cron: '0 9 * * 1-5'   # Weekday morning
+    - cron: '0 14 * * 1-5'  # Weekday afternoon  
+    - cron: '0 20 * * 0,6'  # Weekend evening
+  workflow_dispatch:
+
+jobs:
+  simulate-development:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config --local user.name "${{ github.actor }}"
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Generate realistic activity
+        run: |
+          # Determine activity level based on day of week
+          day_of_week=$(date +%u)
+          
+          if [ $day_of_week -le 5 ]; then
+            # Weekday: Higher activity
+            max_commits=7
+            base_chance=75
+          else
+            # Weekend: Lower activity
+            max_commits=3
+            base_chance=40
+          fi
+          
+          # Random chance of any activity today
+          if [ $((RANDOM % 100)) -gt $base_chance ]; then
+            echo "No development activity today"
+            echo "commits=0" >> $GITHUB_ENV
+            exit 0
+          fi
+          
+          # Generate realistic commit count (favor lower numbers)
+          rand=$((RANDOM % 100))
+          if [ $rand -lt 50 ]; then
+            commits=1
+          elif [ $rand -lt 75 ]; then
+            commits=2
+          elif [ $rand -lt 90 ]; then
+            commits=3
+          else
+            commits=$((RANDOM % max_commits + 1))
+          fi
+          
+          echo "Planning $commits commits for today"
+          echo "commits=$commits" >> $GITHUB_ENV
+
+      - name: Create development files
+        if: env.commits != '0'
+        run: |
+          # Create realistic project structure if it doesn't exist
+          mkdir -p src tests docs
+          
+          # Initialize files with basic content
+          if [ ! -f README.md ]; then
+            echo "# Development Project" > README.md
+            echo "This project simulates realistic development activity." >> README.md
+            echo "" >> README.md
+            echo "## Recent Changes" >> README.md
+          fi
+          
+          if [ ! -f src/main.js ]; then
+            echo "// Main application file" > src/main.js
+            echo "console.log('Hello, World!');" >> src/main.js
+          fi
+          
+          if [ ! -f package.json ]; then
+            cat > package.json << EOF
+          {
+            "name": "dev-activity-sim",
+            "version": "1.0.0",
+            "description": "Simulated development activity",
+            "main": "src/main.js",
+            "scripts": {
+              "start": "node src/main.js",
+              "test": "echo \\"No tests yet\\" && exit 1"
+            }
+          }
+          EOF
+          fi
+
+      - name: Make realistic commits
+        if: env.commits != '0'
+        run: |
+          # Arrays of realistic commit messages
+          declare -a bug_fixes=(
+            "Fix null pointer exception in user authentication"
+            "Resolve memory leak in data processing"
+            "Fix typo in error message"
+            "Correct calculation error in tax computation"
+            "Fix broken link in navigation menu"
+            "Resolve race condition in async operations"
+            "Fix CSS styling issue on mobile devices"
+            "Correct database connection timeout"
+          )
+          
+          declare -a features=(
+            "Add user profile customization options"
+            "Implement dark mode toggle"
+            "Add search functionality to dashboard"
+            "Integrate payment processing system"
+            "Add email notification preferences"
+            "Implement data export feature"
+            "Add multi-language support"
+            "Create user activity logging"
+          )
+          
+          declare -a improvements=(
+            "Optimize database query performance"
+            "Refactor authentication middleware"
+            "Update dependencies to latest versions"
+            "Improve error handling in API endpoints"
+            "Add comprehensive logging"
+            "Enhance code documentation"
+            "Optimize image loading performance"
+            "Clean up unused code and imports"
+          )
+          
+          declare -a maintenance=(
+            "Update README with installation instructions"
+            "Add code formatting rules"
+            "Configure CI/CD pipeline"
+            "Update project dependencies"
+            "Add unit tests for core functions"
+            "Improve code coverage"
+            "Update documentation"
+            "Add development environment setup guide"
+          )
+          
+          for i in $(seq 1 $commits); do
+            # Choose commit type randomly
+            commit_type=$((RANDOM % 4))
+            
+            case $commit_type in
+              0)
+                # Bug fix
+                msg_array=("${bug_fixes[@]}")
+                prefix="fix: "
+                # Make a small change to simulate bug fix
+                echo "// Fixed bug on $(date)" >> src/main.js
+                ;;
+              1)
+                # Feature
+                msg_array=("${features[@]}")
+                prefix="feat: "
+                # Add a feature comment
+                echo "// Added feature: $(date)" >> src/main.js
+                ;;
+              2)
+                # Improvement
+                msg_array=("${improvements[@]}")
+                prefix="refactor: "
+                # Update version or add improvement
+                current_line=$(grep -n "version" package.json | cut -d: -f1)
+                if [ ! -z "$current_line" ]; then
+                  sed -i "${current_line}s/[0-9]\+\.[0-9]\+\.[0-9]\+/1.0.$i/" package.json
+                fi
+                ;;
+              3)
+                # Maintenance
+                msg_array=("${maintenance[@]}")
+                prefix="docs: "
+                # Update README
+                echo "- $(date): Maintenance update" >> README.md
+                ;;
+            esac
+            
+            # Select random message from chosen array
+            array_length=${#msg_array[@]}
+            random_index=$((RANDOM % array_length))
+            message="${prefix}${msg_array[$random_index]}"
+            
+            # Stage and commit changes
+            git add .
+            git commit -m "$message"
+            
+            echo "Committed: $message"
+            
+            # Realistic delay between commits (2-45 minutes)
+            if [ $i -lt $commits ]; then
+              delay=$((RANDOM % 2580 + 120))  # 2-45 minutes in seconds
+              echo "Waiting ${delay}s before next commit..."
+              sleep $delay
+            fi
+          done
+
+      - name: Push changes
+        if: env.commits != '0'
+        run: |
+          git push origin main || git push origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Log activity
+        run: |
+          if [ "$commits" = "0" ]; then
+            echo "No commits made today - taking a break!"
+          else
+            echo "Successfully made $commits commits today"
+          fi
