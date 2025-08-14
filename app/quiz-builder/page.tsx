@@ -25,7 +25,7 @@ export default function QuizBuilder() {
         setLoading(true);
         setError("");
 
-        const response = await axios.get("http://localhost:3000/api/subject", {
+        const response = await axios.get("http://localhost/api/subject", {
           headers: {
             Authorization: "4000" // Capitalized for convention
           }
