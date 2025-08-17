@@ -1,8 +1,13 @@
 'use client';
 
-import { useState } from 'react';
-import { PaystackButton } from 'react-paystack';
-import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
+import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
+
+// Dynamically import PaystackButton to avoid SSR issues
+const PaystackButton = dynamic(
+  () => import('react-paystack').then((mod) => mod.PaystackButton),
+  { ssr: false }
+);
 
 interface PaystackConfig {
   reference: string;
@@ -14,24 +19,6 @@ interface PaystackConfig {
   onClose: () => void;
 }
 
-interface FlutterwaveConfig {
-  public_key: string;
-  tx_ref: string;
-  amount: number;
-  currency: string;
-  payment_options: string;
-  customer: {
-    email: string;
-    phone_number: string;
-    name: string;
-  };
-  customizations: {
-    title: string;
-    description: string;
-    logo: string;
-  };
-}
-
 interface UserDetails {
   email: string;
   name: string;
@@ -41,22 +28,26 @@ interface UserDetails {
 export default function BuyStudentSpace() {
   const [studentCount, setStudentCount] = useState(1);
   const [showPayment, setShowPayment] = useState(false);
-  const [selectedProvider, setSelectedProvider] = useState<'paystack' | 'flutterwave'>('paystack');
   const [userDetails, setUserDetails] = useState<UserDetails>({
     email: '',
     name: '',
     phone: ''
   });
   const [errors, setErrors] = useState<Partial<UserDetails>>({});
+  const [isClient, setIsClient] = useState(false);
   
-  // Replace with your actual keys
+  // Replace with your actual key
   const paystackPublicKey = "pk_test_5fbc5dde82f43e565cc2a33ee3eea6f7ca26299e";
-  const flutterwavePublicKey = "FLWPUBK_TEST-your_flutterwave_public_key";
   
   // Price per student space (in kobo for NGN - multiply by 100)
   const pricePerStudent = 500000; // ₦5,000 in kobo
   
   const totalAmount = studentCount * pricePerStudent;
+
+  // Ensure component only renders client-side features after hydration
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const incrementCount = () => {
     setStudentCount(prev => prev + 1);
@@ -131,43 +122,6 @@ export default function BuyStudentSpace() {
     text: `Pay ₦${(totalAmount / 100).toLocaleString()}`,
     onSuccess: handleSuccess,
     onClose: handleClose,
-  };
-
-  // Flutterwave configuration
-  const flutterwaveConfig: FlutterwaveConfig = {
-    public_key: flutterwavePublicKey,
-    tx_ref: `student-space-${Date.now()}`,
-    amount: totalAmount / 100, // Flutterwave uses actual amount, not kobo
-    currency: 'NGN',
-    payment_options: 'card,mobilemoney,ussd',
-    customer: {
-      email: userDetails.email,
-      phone_number: userDetails.phone,
-      name: userDetails.name,
-    },
-    customizations: {
-      title: 'Student Space Payment',
-      description: `Payment for ${studentCount} student space${studentCount > 1 ? 's' : ''}`,
-      logo: 'https://via.placeholder.com/100x100', // Replace with your logo
-    },
-  };
-
-  const handleFlutterPayment = useFlutterwave(flutterwaveConfig);
-
-  const handleFlutterwavePayment = () => {
-    handleFlutterPayment({
-      callback: (response) => {
-        console.log('Flutterwave payment response:', response);
-        if (response.status === 'successful') {
-          handleSuccess(response);
-        }
-        closePaymentModal();
-      },
-      onClose: () => {
-        console.log('Flutterwave payment closed');
-        handleClose();
-      },
-    });
   };
 
   return (
@@ -284,43 +238,6 @@ export default function BuyStudentSpace() {
               </div>
             </div>
 
-            {/* Payment Provider Selection */}
-            <div className="space-y-3">
-              <label className="block text-sm font-medium text-gray-700">
-                Payment Method
-              </label>
-              
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  onClick={() => setSelectedProvider('paystack')}
-                  className={`p-3 rounded-lg border-2 flex items-center justify-center transition-colors ${
-                    selectedProvider === 'paystack'
-                      ? 'border-blue-500 bg-blue-50 text-blue-700'
-                      : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
-                  }`}
-                >
-                  <div className="text-center">
-                    <div className="font-semibold">Paystack</div>
-                    <div className="text-xs">Cards, Bank Transfer</div>
-                  </div>
-                </button>
-                
-                <button
-                  onClick={() => setSelectedProvider('flutterwave')}
-                  className={`p-3 rounded-lg border-2 flex items-center justify-center transition-colors ${
-                    selectedProvider === 'flutterwave'
-                      ? 'border-orange-500 bg-orange-50 text-orange-700'
-                      : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'
-                  }`}
-                >
-                  <div className="text-center">
-                    <div className="font-semibold">Flutterwave</div>
-                    <div className="text-xs">Cards, Mobile Money</div>
-                  </div>
-                </button>
-              </div>
-            </div>
-
             {/* Price Breakdown */}
             <div className="bg-gray-50 rounded-lg p-4 space-y-2">
               <div className="flex justify-between text-sm text-gray-600">
@@ -346,8 +263,8 @@ export default function BuyStudentSpace() {
               Buy More Student Spaces
             </button>
 
-            {/* Payment Modal/Section */}
-            {showPayment && (
+            {/* Payment Modal */}
+            {showPayment && isClient && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
                 <div className="bg-white rounded-lg p-6 w-full max-w-md">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -381,18 +298,11 @@ export default function BuyStudentSpace() {
                     </div>
                     
                     <div className="flex space-x-3">
-                      {selectedProvider === 'paystack' ? (
+                      {isClient && (
                         <PaystackButton
                           {...paystackConfig}
                           className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors"
                         />
-                      ) : (
-                        <button
-                          onClick={handleFlutterwavePayment}
-                          className="flex-1 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded transition-colors"
-                        >
-                          Pay with Flutterwave
-                        </button>
                       )}
                       
                       <button
