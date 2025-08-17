@@ -113,13 +113,51 @@
       "featured": true,
       "free": true,
       "price": null
+    },
+       {
+      "id": "plugin-004",
+      "name": "Buy More Student Space",
+      "description": "Purchase additional student spaces with secure payment options",
+      "details": "Expand your student space with easy purchases using Paystack or Flutterwave. Secure transactions and instant updates to your account.",
+      "version": "1.5.2",
+      "width": 1200,
+      "height": 800,
+      "author": "LearningDeck Team",
+      "category": "Payment",
+      "tags": ["payment", "buy", "student space"],
+      "link": "https://plugins-manager-lds.vercel.app/students-space",
+      "previewImage": "https://example.com/images/attendance-preview.jpg",
+      "icon": "https://example.com/icons/attendance-icon.png",
+      "screenshots": [
+        "https://example.com/screenshots/attendance-1.jpg",
+        "https://example.com/screenshots/attendance-2.jpg"
+      ],
+      "features": [
+        "QR code scanning",
+        "Automated notifications",
+        "Parent reports",
+        "Bulk operations"
+      ],
+      "requirements": {
+        "minVersion": "1.0.0",
+        "permissions": ["camera", "storage", "notifications"]
+      },
+      "size": "3.2MB",
+      "lastUpdated": "2024-01-08T09:15:00Z",
+      "downloads": 2100,
+      "rating": 4.9,
+      "reviews": 78,
+      "status": "active",
+      "featured": true,
+      "free": true,
+      "price": null
     }
   ],
   "metadata": {
     "version": "1.0.0",
     "lastUpdated": "2024-01-15T12:00:00Z",
     "totalPlugins": 3,
-    "categories": ["Education", "Assessment", "Management"],
+    "categories": ["Education", "Assessment", "Management", "Payment","Automation"],
     "apiVersion": "v1"
   }
 }
