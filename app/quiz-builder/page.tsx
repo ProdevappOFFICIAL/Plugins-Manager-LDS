@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import { useState, useEffect } from "react";
-
+import '../globals.css'; // Ensure global styles are applied
 export default function QuizBuilder() {
   type Question = {
     text: string;
