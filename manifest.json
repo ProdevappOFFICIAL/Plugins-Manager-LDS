@@ -120,7 +120,7 @@
       "description": "Track and manage student attendance with automated reports",
       "details": "Efficiently track student attendance with QR code scanning, automated notifications, and comprehensive reporting. Generate attendance reports for parents and administrators.",
       "version": "1.5.2",
-      "width": 414,
+      "width": 600,
       "height": 700,
       "author": "SchoolTech Solutions",
       "category": "Management",
