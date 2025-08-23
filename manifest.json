@@ -1,43 +1,45 @@
 {
   "plugins": [
-    {
+   {
       "id": "plugin-001",
-      "name": "Quiz Builder Pro",
-      "description": "Advanced quiz creation tool with multiple question types and analytics",
-      "details": "Create interactive quizzes with drag-and-drop interface, support for images, videos, and real-time analytics. Perfect for educators and trainers.",
-      "version": "1.2.0",
+      "name": "Buy Student Space",
+      "description": "Purchase additional storage space for student data",
+      "details": "Easily buy extra storage space to accommodate growing student data needs. Flexible plans and secure payment options available.",
+      "version": "1.0.2",
+      "width": 400,
+      "height": 680,
       "author": "LearningDeck Team",
-      "width": 800,
-      "height": 500,
-      "category": "Education",
-      "tags": ["quiz", "education", "interactive"],
-      "link": "https://plugins-manager-lds.vercel.app/quiz-builder",
-      "previewImage": "https://prodevappofficial.github.io/Plugins-Manager-LDS/assets/quiz-builderr.JPG",
-      "icon": "https://example.com/icons/quiz-builder-icon.png",
+      "category": "Payment",
+      "tags": ["payment", "storage", "subscription"],
+      "link": "https://plugin-test-pay-4zxw.vercel.app/",
+      "previewImage": "https://example.com/images/attendance-preview.jpg",
+      "icon": "https://example.com/icons/attendance-icon.png",
       "screenshots": [
-        "https://prodevappofficial.github.io/Plugins-Manager-LDS/assets/quiz-builder.JPG",
-        "https://prodevappofficial.github.io/Plugins-Manager-LDS/assets/quiz-builder.JPG"
+        "https://example.com/screenshots/attendance-1.jpg",
+        "https://example.com/screenshots/attendance-2.jpg"
       ],
-      "features": [
-        "Multiple question types",
-        "Real-time analytics",
-        "Export to PDF",
-        "Mobile responsive"
-      ],
+       "features": [
+         "Buy additional storage",
+         "Flexible payment",
+          "Secure transactions"
+        ],    
+
       "requirements": {
         "minVersion": "1.0.0",
-        "permissions": ["storage", "network"]
+        "permissions": ["network", "storage"]
       },
-      "size": "2.5MB",
-      "lastUpdated": "2024-01-15T10:30:00Z",
-      "downloads": 1250,
-      "rating": 4.8,
-      "reviews": 45,
+      "size": "3.2MB",
+      "lastUpdated": "2024-01-08T09:15:00Z",
+      "downloads": 2100,
+      "rating": 4.9,
+      "reviews": 78,
       "status": "active",
       "featured": true,
       "free": true,
       "price": null
-    },
+    }
+   ,
+   
     {
       "id": "plugin-002",
       "name": "Result Builder Pro",
@@ -114,39 +116,39 @@
       "free": true,
       "price": null
     },
-        {
+     {
       "id": "plugin-004",
-      "name": "Buy Student Space",
-      "description": "Purchase additional storage space for student data",
-      "details": "Easily buy extra storage space to accommodate growing student data needs. Flexible plans and secure payment options available.",
-      "version": "1.0.2",
-      "width": 400,
-      "height": 680,
+      "name": "Quiz Builder Pro",
+      "description": "Advanced quiz creation tool with multiple question types and analytics",
+      "details": "Create interactive quizzes with drag-and-drop interface, support for images, videos, and real-time analytics. Perfect for educators and trainers.",
+      "version": "1.2.0",
       "author": "LearningDeck Team",
-      "category": "Payment",
-      "tags": ["payment", "storage", "subscription"],
-      "link": "https://plugin-test-pay-4zxw.vercel.app/",
-      "previewImage": "https://example.com/images/attendance-preview.jpg",
-      "icon": "https://example.com/icons/attendance-icon.png",
+      "width": 800,
+      "height": 500,
+      "category": "Education",
+      "tags": ["quiz", "education", "interactive"],
+      "link": "https://plugins-manager-lds.vercel.app/quiz-builder",
+      "previewImage": "https://prodevappofficial.github.io/Plugins-Manager-LDS/assets/quiz-builderr.JPG",
+      "icon": "https://example.com/icons/quiz-builder-icon.png",
       "screenshots": [
-        "https://example.com/screenshots/attendance-1.jpg",
-        "https://example.com/screenshots/attendance-2.jpg"
+        "https://prodevappofficial.github.io/Plugins-Manager-LDS/assets/quiz-builder.JPG",
+        "https://prodevappofficial.github.io/Plugins-Manager-LDS/assets/quiz-builder.JPG"
       ],
-       "features": [
-         "Buy additional storage",
-         "Flexible payment",
-          "Secure transactions"
-        ],    
-
+      "features": [
+        "Multiple question types",
+        "Real-time analytics",
+        "Export to PDF",
+        "Mobile responsive"
+      ],
       "requirements": {
         "minVersion": "1.0.0",
-        "permissions": ["network", "storage"]
+        "permissions": ["storage", "network"]
       },
-      "size": "3.2MB",
-      "lastUpdated": "2024-01-08T09:15:00Z",
-      "downloads": 2100,
-      "rating": 4.9,
-      "reviews": 78,
+      "size": "2.5MB",
+      "lastUpdated": "2024-01-15T10:30:00Z",
+      "downloads": 1250,
+      "rating": 4.8,
+      "reviews": 45,
       "status": "active",
       "featured": true,
       "free": true,
