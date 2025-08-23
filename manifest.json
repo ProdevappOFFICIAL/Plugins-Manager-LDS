@@ -113,6 +113,44 @@
       "featured": true,
       "free": true,
       "price": null
+    },
+        {
+      "id": "plugin-004",
+      "name": "Student Attendance Tracker 2",
+      "description": "Track and manage student attendance with automated reports",
+      "details": "Efficiently track student attendance with QR code scanning, automated notifications, and comprehensive reporting. Generate attendance reports for parents and administrators.",
+      "version": "1.5.2",
+      "width": 1200,
+      "height": 800,
+      "author": "SchoolTech Solutions",
+      "category": "Management",
+      "tags": ["attendance", "tracking", "reports"],
+      "link": "https://plugin-test-pay-4zxw.vercel.app/",
+      "previewImage": "https://example.com/images/attendance-preview.jpg",
+      "icon": "https://example.com/icons/attendance-icon.png",
+      "screenshots": [
+        "https://example.com/screenshots/attendance-1.jpg",
+        "https://example.com/screenshots/attendance-2.jpg"
+      ],
+      "features": [
+        "QR code scanning",
+        "Automated notifications",
+        "Parent reports",
+        "Bulk operations"
+      ],
+      "requirements": {
+        "minVersion": "1.0.0",
+        "permissions": ["camera", "storage", "notifications"]
+      },
+      "size": "3.2MB",
+      "lastUpdated": "2024-01-08T09:15:00Z",
+      "downloads": 2100,
+      "rating": 4.9,
+      "reviews": 78,
+      "status": "active",
+      "featured": true,
+      "free": true,
+      "price": null
     }
   ],
   "metadata": {
