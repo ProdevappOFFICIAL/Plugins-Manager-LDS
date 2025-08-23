@@ -120,11 +120,11 @@
       "description": "Purchase additional storage space for student data",
       "details": "Easily buy extra storage space to accommodate growing student data needs. Flexible plans and secure payment options available.",
       "version": "1.0.2",
-      "width": 414,
-      "height": 600,
+      "width": 400,
+      "height": 680,
       "author": "LearningDeck Team",
-      "category": "Management",
-      "tags": ["attendance", "tracking", "reports"],
+      "category": "Payment",
+      "tags": ["payment", "storage", "subscription"],
       "link": "https://plugin-test-pay-4zxw.vercel.app/",
       "previewImage": "https://example.com/images/attendance-preview.jpg",
       "icon": "https://example.com/icons/attendance-icon.png",
@@ -132,15 +132,15 @@
         "https://example.com/screenshots/attendance-1.jpg",
         "https://example.com/screenshots/attendance-2.jpg"
       ],
-      "features": [
-        "QR code scanning",
-        "Automated notifications",
-        "Parent reports",
-        "Bulk operations"
-      ],
+       "features": [
+         "Buy additional storage",
+         "Flexible payment",
+          "Secure transactions",
+        ],    
+
       "requirements": {
         "minVersion": "1.0.0",
-        "permissions": ["camera", "storage", "notifications"]
+        "permissions": ["network", "storage"]
       },
       "size": "3.2MB",
       "lastUpdated": "2024-01-08T09:15:00Z",
