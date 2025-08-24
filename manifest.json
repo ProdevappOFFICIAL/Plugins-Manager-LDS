@@ -1,6 +1,6 @@
 {
   "plugins": [
-   {
+    {
       "id": "plugin-001",
       "name": "Buy Student Space",
       "description": "Purchase additional storage space for student data",
@@ -12,17 +12,18 @@
       "category": "Payment",
       "tags": ["payment", "storage", "subscription"],
       "link": "https://plugin-test-pay-4zxw.vercel.app/",
-      "previewImage": "https://example.com/images/attendance-preview.jpg",
+      "previewImage": "https://prodevappofficial.github.io/static-db/plugin_001_1.JPG",
       "icon": "https://example.com/icons/attendance-icon.png",
       "screenshots": [
-        "https://example.com/screenshots/attendance-1.jpg",
-        "https://example.com/screenshots/attendance-2.jpg"
+        "https://prodevappofficial.github.io/static-db/plugin_001_1.JPG",
+        "https://prodevappofficial.github.io/static-db/plugin-001-2.JPG",
+        "https://prodevappofficial.github.io/static-db/plugin-001-3.JPG"
       ],
-       "features": [
-         "Buy additional storage",
-         "Flexible payment",
-          "Secure transactions"
-        ],    
+      "features": [
+        "Buy additional storage",
+        "Flexible payment",
+        "Secure transactions"
+      ],
 
       "requirements": {
         "minVersion": "1.0.0",
@@ -37,9 +38,7 @@
       "featured": true,
       "free": true,
       "price": null
-    }
-   ,
-   
+    },
     {
       "id": "plugin-002",
       "name": "Result Builder Pro",
@@ -116,7 +115,7 @@
       "free": true,
       "price": null
     },
-     {
+    {
       "id": "plugin-004",
       "name": "Quiz Builder Pro",
       "description": "Advanced quiz creation tool with multiple question types and analytics",
